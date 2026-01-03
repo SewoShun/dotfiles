@@ -5,13 +5,14 @@
   ...
 }:
 let
+  nvim-ime-unwrapped = lib.getExe pkgs.nvim-ime;
   nvim-ime =
     let
       text-file = "/tmp/nvim-ime.txt";
     in
     pkgs.writeScript "nvim-ime" # bash
       ''
-        ${ghostty} --title="nvim-ime" --command="nvim ${text-file} -c startinsert"
+        ${ghostty} --title="nvim-ime" --command="${nvim-ime-unwrapped} ${text-file} -c startinsert"
         if [[ -e "${text-file}" ]]; then
           wl-copy < ${text-file}
           rm -f ${text-file}

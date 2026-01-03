@@ -799,11 +799,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1767165532,
-        "narHash": "sha256-zu1eUJ6O4DoyefV2G/H7hPKSgzErlMShaikvh8mTu70=",
+        "lastModified": 1767429029,
+        "narHash": "sha256-cXDfeQWr5C9Bny4IsUJZHscgFsNVKceyPASCvyLIYdU=",
         "owner": "SewoShun",
         "repo": "nixvim-config",
-        "rev": "8006a14d2c5ec9995e5821ca98bf06286c5216c7",
+        "rev": "b0e207182c3e795633b664c21ce5a56a56586304",
         "type": "github"
       },
       "original": {
