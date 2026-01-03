@@ -7,6 +7,7 @@
       isNormalUser = true;
       extraGroups = [
         "networkmanager"
+        "seat"
         "wheel"
       ];
     };
