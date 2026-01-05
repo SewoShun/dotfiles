@@ -1,9 +1,9 @@
 {
   services.displayManager = {
     enable = true;
-    lemurs.enable = true;
+    lemurs.enable = false;
     sddm = {
-      enable = false;
+      enable = true;
       wayland.enable = true;
     };
   };
