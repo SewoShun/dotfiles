@@ -1,0 +1,3 @@
+{
+  services.hazkey.enable = true;
+}

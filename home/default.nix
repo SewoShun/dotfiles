@@ -18,6 +18,4 @@
     inputs.nix-hazkey.homeModules.hazkey
     inputs.ragenix.homeManagerModules.default
   ];
-
-  services.hazkey.enable = true;
 }

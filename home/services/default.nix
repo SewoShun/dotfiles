@@ -1,6 +1,7 @@
 {
   imports = [
     ./flatpak.nix
+    ./hazkey.nix
   ];
 
   services = {
