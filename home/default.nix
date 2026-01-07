@@ -15,6 +15,9 @@
     inputs.catppuccin.homeModules.catppuccin
     inputs.niri.homeModules.niri
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
+    inputs.nix-hazkey.homeModules.hazkey
     inputs.ragenix.homeManagerModules.default
   ];
+
+  services.hazkey.enable = true;
 }

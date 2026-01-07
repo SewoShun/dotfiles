@@ -17,6 +17,7 @@
     lanzaboote.inputs.rust-overlay.follows = "rust-overlay";
     niri.url = "github:sodiboo/niri-flake";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-hazkey.url = "github:aster-void/nix-hazkey";
     ragenix.url = "github:yaxitech/ragenix";
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
