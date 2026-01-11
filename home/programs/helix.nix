@@ -93,7 +93,7 @@
       lldb
       # formatter
       just-formatter
-      nixfmt-rfc-style
+      nixfmt
     ];
   };
 }

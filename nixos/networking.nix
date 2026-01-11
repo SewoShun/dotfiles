@@ -4,7 +4,10 @@
     firewall = {
       enable = true;
       checkReversePath = "loose";
-      trustedInterfaces = [ "tailscale0" "docker0" ];
+      trustedInterfaces = [
+        "tailscale0"
+        "docker0"
+      ];
       allowedUDPPorts = [
         config.services.tailscale.port
         1149

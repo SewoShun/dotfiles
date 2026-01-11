@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ config, lib, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -6,6 +6,8 @@
     autosuggestion = {
       enable = true;
     };
+
+    dotDir = "${config.xdg.configHome}/zsh";
     enableCompletion = true;
     envExtra = lib.strings.concatLines [
       "PATH=$PATH:~/.cargo/bin/"
