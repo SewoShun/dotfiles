@@ -12,6 +12,8 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
     catppuccin.url = "github:catppuccin/nix";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.rust-overlay.follows = "rust-overlay";
