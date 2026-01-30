@@ -10,6 +10,7 @@
     ./git.nix
     ./helix.nix
     ./jujutsu.nix
+    ./nh.nix
     ./niri.nix
     ./nushell.nix
     ./rio.nix
