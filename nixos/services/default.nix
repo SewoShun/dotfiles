@@ -1,5 +1,6 @@
 {
   imports = [
+    ./angrr.nix
     ./displayManager.nix
     ./kmscon.nix
     ./pipewire.nix
