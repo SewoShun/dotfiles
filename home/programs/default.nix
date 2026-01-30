@@ -27,6 +27,7 @@
   programs = {
     bat.enable = true;
     bottom.enable = true;
+    carapace.enable = true;
     delta.enable = true;
     docker-cli.enable = true;
     emacs.enable = true;

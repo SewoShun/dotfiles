@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   users = {
-    defaultUserShell = pkgs.fish;
+    defaultUserShell = pkgs.nushell;
     users.sewo = {
       hashedPasswordFile = config.age.secrets.password.path;
       isNormalUser = true;
