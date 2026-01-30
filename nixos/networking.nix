@@ -3,7 +3,6 @@
   networking = {
     firewall = {
       enable = true;
-      checkReversePath = "loose";
       trustedInterfaces = [
         "tailscale0"
         "docker0"
