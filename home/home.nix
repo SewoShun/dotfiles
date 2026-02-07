@@ -10,6 +10,7 @@
       brightnessctl
       cachix
       claude-code
+      comma
       discord
       dust
       flatpak
@@ -25,6 +26,7 @@
       kiro-fhs
       krusader
       lazyjj
+      manix
       nb
       neovim
       nodejs

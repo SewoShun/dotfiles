@@ -27,7 +27,6 @@
   programs = {
     bat.enable = true;
     bottom.enable = true;
-    carapace.enable = true;
     delta.enable = true;
     docker-cli.enable = true;
     emacs.enable = true;
@@ -37,6 +36,7 @@
     fzf.enable = true;
     lazydocker.enable = true;
     lazygit.enable = true;
+    nix-index.enable = true;
     ripgrep.enable = true;
     ripgrep-all.enable = true;
     skim.enable = true;

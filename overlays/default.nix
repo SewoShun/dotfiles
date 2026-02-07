@@ -8,5 +8,7 @@
     {
       stable = inputs.nixpkgs-stable.legacyPackages.${system};
       master = inputs.nixpkgs-master.legacyPackages.${system};
+      nix-index = inputs.nix-index.packages.${system}.default;
+      # nix-locate = inputs.nix-index.apps.${system}.nix-locate;
     };
 }
