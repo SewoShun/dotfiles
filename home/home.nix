@@ -10,7 +10,6 @@
       brightnessctl
       cachix
       claude-code
-      comma
       discord
       dust
       flatpak

@@ -22,6 +22,8 @@
     nix-hazkey.url = "github:aster-void/nix-hazkey";
     nix-index.url = "github:nix-community/nix-index";
     nix-index.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     ragenix.url = "github:yaxitech/ragenix";
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";

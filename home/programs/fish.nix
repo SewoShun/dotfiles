@@ -1,13 +1,16 @@
-{ pkgs, host, ... }:
+{
+  pkgs,
+  lib,
+  host,
+  ...
+}:
 {
   programs.fish = {
     enable = true;
+    functions = {
+      fish_greeting = "${lib.getExe pkgs.fastfetch}";
+    };
     shellAbbrs = {
-      nixrsl = "nh os switch ~/ghq/github.com/SewoShun/dotfiles -H ${host}";
-      nixrbl = "nh os boot ~/ghq/github.com/SewoShun/dotfiles -H ${host}";
-      nixrsr = "nh os switch github:SewoShun/dotfiles -H ${host}";
-      nixrbr = "nh os boot github:SewoShun/dotfiles -H ${host}";
-
       osl = {
         command = "nh";
         expansion = "os switch ~/ghq/github.com/SewoShun/dotfiles -H ${host}";

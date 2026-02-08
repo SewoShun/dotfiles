@@ -37,6 +37,7 @@
     lazydocker.enable = true;
     lazygit.enable = true;
     nix-index.enable = true;
+    nix-index-database.comma.enable = true;
     ripgrep.enable = true;
     ripgrep-all.enable = true;
     skim.enable = true;
