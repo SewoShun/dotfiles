@@ -27,7 +27,7 @@ in
 
     settings = {
       binds = with config.lib.niri.actions; {
-        "Mod+Return".action = spawn ghostty "--command=${lib.getExe config.programs.tmux.package}";
+        "Mod+Return".action = spawn ghostty "--command=${lib.getExe config.programs.zellij.package}";
         "Mod+b".action = spawn "floorp";
         "Mod+d".action = spawn "rofi" "-show" "drun";
         "Mod+Shift+p".action = spawn "rofi" "-show" "p" "-modi" "p:'rofi-power-menu'";

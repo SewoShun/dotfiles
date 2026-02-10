@@ -1,72 +1,53 @@
+{ lib, ... }:
 {
   programs.zellij = {
     enable = true;
     settings = {
-      default_mode = "locked";
       mouse_mode = false;
-
+      pane_frames = false;
+      show_startup_tips = false;
+      default_mode = "locked";
       keybinds = {
-        normal = {
-          _children = [
-            {
-              bind = {
-                _args = [ "p" ];
-                _children = [ { GoToPreviousTab = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "n" ];
-                _children = [ { GoToNextTab = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "h" ];
-                _children = [ { HalfPageScrollUp = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "j" ];
-                _children = [ { ScrollDown = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "k" ];
-                _children = [ { ScrollUp = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "l" ];
-                _children = [ { HalfPageScrollDown = { }; } ];
-              };
-            }
-            {
-              bind = {
-                _args = [ "t" ];
-                _children = [
-                  { NewTab = { }; }
-                  { SwitchToMode._args = [ "locked" ]; }
-                ];
-              };
-            }
-          ];
-        };
-
-        shared_except = {
-          _args = [ "locked" ];
-          _children = [
-            {
-              bind = {
-                _args = [ "Esc" ];
-                _children = [ { SwitchToMode._args = [ "locked" ]; } ];
-              };
-            }
-          ];
-        };
+        normal._children = [
+          {
+            bind = {
+              _args = [ "Alt h" ];
+              _children = [ { GoToPreviousTab = { }; } ];
+            };
+          }
+          {
+            bind = {
+              _args = [ "Alt l" ];
+              _children = [
+                { GoToNextTab = { }; }
+              ];
+            };
+          }
+          {
+            bind = {
+              _args = [ "Alt n" ];
+              _children = [
+                { NewTab = { }; }
+              ];
+            };
+          }
+          {
+            bind = {
+              _args = [ "Alt x" ];
+              _children = [
+                { CloseTab = { }; }
+              ];
+            };
+          }
+        ]
+        ++ (map (i: {
+          bind = {
+            _args = [ "Alt ${toString i}" ];
+            _children = [
+              { GoToTab = i; }
+            ];
+          };
+        }) (lib.lists.range 1 9));
       };
     };
   };
