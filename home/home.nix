@@ -32,7 +32,7 @@
       obsidian
       ollama
       pnpm
-      primus
+      # primus
       procs
       rip2
       rofi-power-menu
