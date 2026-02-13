@@ -11,13 +11,13 @@
         normal._children = [
           {
             bind = {
-              _args = [ "Alt h" ];
+              _args = [ "p" ];
               _children = [ { GoToPreviousTab = { }; } ];
             };
           }
           {
             bind = {
-              _args = [ "Alt l" ];
+              _args = [ "n" ];
               _children = [
                 { GoToNextTab = { }; }
               ];
@@ -25,7 +25,7 @@
           }
           {
             bind = {
-              _args = [ "Alt n" ];
+              _args = [ "N" ];
               _children = [
                 { NewTab = { }; }
               ];
@@ -33,7 +33,7 @@
           }
           {
             bind = {
-              _args = [ "Alt x" ];
+              _args = [ "x" ];
               _children = [
                 { CloseTab = { }; }
               ];
@@ -42,7 +42,9 @@
         ]
         ++ (map (i: {
           bind = {
-            _args = [ "Alt ${toString i}" ];
+            _args = [
+              (toString i)
+            ];
             _children = [
               { GoToTab = i; }
             ];
