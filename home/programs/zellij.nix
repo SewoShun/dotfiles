@@ -11,6 +11,12 @@
         normal._children = [
           {
             bind = {
+              _args = [ "Esc" ];
+              _children = [ { SwitchToMode = "locked"; } ];
+            };
+          }
+          {
+            bind = {
               _args = [ "p" ];
               _children = [ { GoToPreviousTab = { }; } ];
             };
@@ -18,38 +24,51 @@
           {
             bind = {
               _args = [ "n" ];
-              _children = [
-                { GoToNextTab = { }; }
-              ];
+              _children = [ { GoToNextTab = { }; } ];
             };
           }
           {
             bind = {
               _args = [ "N" ];
-              _children = [
-                { NewTab = { }; }
-              ];
+              _children = [ { NewTab = { }; } ];
             };
           }
           {
             bind = {
               _args = [ "x" ];
-              _children = [
-                { CloseTab = { }; }
-              ];
+              _children = [ { CloseTab = { }; } ];
             };
           }
         ]
         ++ (map (i: {
           bind = {
-            _args = [
-              (toString i)
-            ];
-            _children = [
-              { GoToTab = i; }
-            ];
+            _args = [ (toString i) ];
+            _children = [ { GoToTab = i; } ];
           };
         }) (lib.lists.range 1 9));
+        shared_except = {
+          _args = [ "locked" ];
+          _children = [
+            {
+              bind = {
+                _args = [ "Alt p" ];
+                _children = [ { GoToPreviousTab = { }; } ];
+              };
+            }
+            {
+              bind = {
+                _args = [ "Alt n" ];
+                _children = [ { GoToNextTab = { }; } ];
+              };
+            }
+          ]
+          ++ (map (i: {
+            bind = {
+              _args = [ "Alt ${toString i}" ];
+              _children = [ { GoToTab = i; } ];
+            };
+          }) (lib.lists.range 1 9));
+        };
       };
     };
   };
