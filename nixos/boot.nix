@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   boot = {
     loader = {
@@ -12,6 +12,6 @@
       "zswap.enabled=1"
       "zswap.shrinker_enabled=1"
     ];
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    kernelPackages = lib.mkDefault pkgs.linuxKernel.packages.linux_zen;
   };
 }

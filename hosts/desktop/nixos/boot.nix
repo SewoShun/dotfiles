@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   boot = {
     initrd.availableKernelModules = [
@@ -10,5 +11,6 @@
     loader.systemd-boot = {
       enable = true;
     };
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
   };
 }
