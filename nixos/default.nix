@@ -14,6 +14,7 @@
     ./nix.nix
     ./nixpkgs.nix
     ./security.nix
+    ./system.nix
     ./systemd.nix
     ./time.nix
     ./users.nix
