@@ -19,6 +19,7 @@ let
         fi
       '';
 
+  alacritty = lib.getExe config.programs.alacritty.package;
   ghostty = lib.getExe config.programs.ghostty.package;
 in
 {
@@ -27,7 +28,7 @@ in
 
     settings = {
       binds = with config.lib.niri.actions; {
-        "Mod+Return".action = spawn ghostty "--command=${lib.getExe config.programs.zellij.package}";
+        "Mod+Return".action = spawn alacritty "--command=${lib.getExe config.programs.zellij.package}";
         "Mod+b".action = spawn "floorp";
         "Mod+d".action = spawn "rofi" "-show" "drun";
         "Mod+Shift+p".action = spawn "rofi" "-show" "p" "-modi" "p:'rofi-power-menu'";
