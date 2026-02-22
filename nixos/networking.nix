@@ -14,6 +14,9 @@
     };
     hostName = "nixos";
     iproute2.enable = true;
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false;
+    };
   };
 }
