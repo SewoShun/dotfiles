@@ -381,11 +381,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771647911,
-        "narHash": "sha256-18liNHHwOmcaKCpOptE3wLW97fm5v7RTLiZBecX7km0=",
+        "lastModified": 1771750122,
+        "narHash": "sha256-+JYMGE6Z4O7GoaBFHByl22XcyeStu56GE1eu3+2sVjI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "436b27742c996b75e2baf8e835e3b3eae0c9fbd4",
+        "rev": "603626a8da9e1b622e55251a90ef486b8179334c",
         "type": "github"
       },
       "original": {
@@ -616,11 +616,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771130777,
-        "narHash": "sha256-UIKOwG0D9XVIJfNWg6+gENAvQP+7LO46eO0Jpe+ItJ0=",
+        "lastModified": 1771734689,
+        "narHash": "sha256-/phvMgr1yutyAMjKnZlxkVplzxHiz60i4rc+gKzpwhg=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "efec7aaad8d43f8e5194df46a007456093c40f88",
+        "rev": "8f590b832326ab9699444f3a48240595954a4b10",
         "type": "github"
       },
       "original": {
@@ -708,11 +708,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1771666164,
-        "narHash": "sha256-wLueSLiYmZgNXUhVfxjcU0dH3WQkrxK2Oqe7Vrveh9Q=",
+        "lastModified": 1771752681,
+        "narHash": "sha256-Ak1K4tgkqlI5I8DdBDJFhgw36uXDgtTD9+A7jv/3jmw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "054a330ccd5cbb7eeddf571d0552b3534ebfdd41",
+        "rev": "c9bcf43e95457bb8a41b4c144de5cb394afe5261",
         "type": "github"
       },
       "original": {
@@ -1063,11 +1063,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771642886,
-        "narHash": "sha256-4zOvSi0WkS2WAaoJtM28wECtS9S+L38CPYbhF+wINDA=",
+        "lastModified": 1771729765,
+        "narHash": "sha256-HNsDSR5bhLSrIpi9bTb2uTK1qnPo1xFSBxs6YmFyprk=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "85078369717bdbe1f266c9eaad5e66956fb6feea",
+        "rev": "be926cb1a76e8450ab2b92121b2e88d09fa4d41c",
         "type": "github"
       },
       "original": {
@@ -1102,11 +1102,11 @@
         "systems": "systems_5"
       },
       "locked": {
-        "lastModified": 1768119527,
-        "narHash": "sha256-tDBKNeZPyc04nJwLWdE//aQDl7C1QZiKpOxTkaknA60=",
+        "lastModified": 1771062192,
+        "narHash": "sha256-gOGLVeKtoWJrcaESPfULDnohntqBe+hzBhvDiF935Cs=",
         "owner": "lanastara_foss",
         "repo": "starship-jj",
-        "rev": "da7b88c8c78115ca84ce4160d99cefb6d2299d8a",
+        "rev": "e2fe1544fe92198427a1fcc1dfad9dbccf93ce79",
         "type": "gitlab"
       },
       "original": {
