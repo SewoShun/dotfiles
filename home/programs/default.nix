@@ -12,6 +12,7 @@
     ./jujutsu.nix
     ./nh.nix
     ./niri.nix
+    ./noctalia-shell.nix
     ./nushell.nix
     ./rio.nix
     ./rofi.nix

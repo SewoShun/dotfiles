@@ -7,7 +7,8 @@
 let
   bctl = "${lib.getExe pkgs.brightnessctl}";
   niri = "${lib.getExe config.programs.niri.package}";
-  swaylock = "${lib.getExe config.programs.swaylock.package}";
+  # lock = "${lib.getExe config.programs.swaylock.package}";
+  lock = "${lib.getExe config.programs.noctalia-shell.package} ipc call lockScreen lock";
 in
 {
   services.swayidle = {
@@ -20,7 +21,7 @@ in
       }
       {
         timeout = 120;
-        command = "${swaylock}";
+        command = "${lock}";
       }
       {
         timeout = 180;
@@ -32,6 +33,6 @@ in
         command = "${pkgs.systemd}/bin/systemctl suspend";
       }
     ];
-    events.before-sleep = "${swaylock}";
+    events.before-sleep = "${lock}";
   };
 }

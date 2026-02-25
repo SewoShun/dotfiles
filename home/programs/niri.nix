@@ -21,6 +21,15 @@ let
 
   alacritty = lib.getExe config.programs.alacritty.package;
   ghostty = lib.getExe config.programs.ghostty.package;
+
+  noctalia-call =
+    cmd:
+    [
+      "noctalia-shell"
+      "ipc"
+      "call"
+    ]
+    ++ (pkgs.lib.splitString " " cmd);
 in
 {
   programs.niri = {
@@ -30,15 +39,18 @@ in
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn alacritty "--command=${lib.getExe config.programs.zellij.package}";
         "Mod+b".action = spawn "floorp";
-        "Mod+d".action = spawn "rofi" "-show" "drun";
-        "Mod+Shift+p".action = spawn "rofi" "-show" "p" "-modi" "p:'rofi-power-menu'";
+        "Mod+d".action.spawn = noctalia-call "launcher toggle";
+        "Mod+Shift+p".action.spawn = noctalia-call "sessionMenu toggle";
+        "Mod+Comma".action.spawn = noctalia-call "settings toggle";
+        "Mod+Shift+m".action.spawn = noctalia-call "systemMonitor toggle";
+        "Mod+c".action.spawn = noctalia-call "calendar toggle";
         "Mod+i".action = spawn "${nvim-ime}";
 
-        XF86MonBrightnessUp.action = spawn "brightnessctl" "set" "+5%";
-        XF86MonBrightnessDown.action = spawn "brightnessctl" "set" "5%-";
-        XF86AudioRaiseVolume.action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+";
-        XF86AudioLowerVolume.action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-";
-        XF86AudioMute.action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
+        XF86MonBrightnessUp.action.spawn = noctalia-call "brightness increase";
+        XF86MonBrightnessDown.action.spawn = noctalia-call "brightness decrease";
+        XF86AudioRaiseVolume.action.spawn = noctalia-call "volume increase";
+        XF86AudioLowerVolume.action.spawn = noctalia-call "volume decrease";
+        XF86AudioMute.action.spawn = noctalia-call "volume muteOutput";
 
         "Mod+s".action.screenshot.show-pointer = true;
         "Mod+Shift+s".action.screenshot-window.write-to-disk = true;
@@ -95,7 +107,8 @@ in
       screenshot-path = "~/Pictures/Screenshots/screenshot-%Y-%m-%d-%H-%M-%S.png";
 
       spawn-at-startup = [
-        { argv = [ "waybar" ]; }
+        { argv = [ "noctalia-shell" ]; }
+        # { argv = [ "waybar" ]; }
         {
           argv = [
             "fcitx5"
@@ -104,7 +117,10 @@ in
         }
       ];
 
-      layout.focus-ring.width = 1;
+      layout = {
+        focus-ring.width = 1;
+        background-color = "transparent";
+      };
 
       window-rules = [
         {
@@ -118,6 +134,19 @@ in
           focus-ring.enable = false;
         }
       ];
+
+      layer-rules = [
+        {
+          matches = [
+            {
+              namespace = "^noctalia-wallpaper*";
+            }
+          ];
+          place-within-backdrop = true;
+        }
+      ];
+
+      overview.workspace-shadow.enable = false;
 
       switch-events = with config.lib.niri.actions; {
         lid-close.action = spawn "systemctl" "suspend-then-hibernate";

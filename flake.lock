@@ -945,6 +945,26 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771979542,
+        "narHash": "sha256-0hqvh2D8tdwFG9pT9Ds1EysZYPTKpVJCunnXQ31MUZ8=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "fe8e23f1d0e6ed4bdefd061e6834c4d61f2266be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks-nix": {
       "inputs": {
         "flake-compat": [
@@ -1011,6 +1031,7 @@
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable_3",
         "nixvim-config": "nixvim-config",
+        "noctalia": "noctalia",
         "ragenix": "ragenix",
         "rust-overlay": "rust-overlay_2",
         "starship-jj": "starship-jj",
