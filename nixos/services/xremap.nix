@@ -1,4 +1,9 @@
+{ inputs, ... }:
 {
+  imports = [
+    inputs.xremap.nixosModules.default
+  ];
+
   services.xremap = {
     enable = true;
     config.modmap = [

@@ -20,10 +20,7 @@
     ./virtualisation.nix
     ./xdg.nix
 
-    inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.home-manager
-    inputs.ragenix.nixosModules.default
-    inputs.xremap.nixosModules.default
   ];
 
   system.stateVersion = "25.11";
