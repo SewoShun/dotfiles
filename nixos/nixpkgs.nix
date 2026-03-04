@@ -7,6 +7,7 @@
     };
 
     overlays = [
+      inputs.claude-desktop.overlays.default
       inputs.niri.overlays.niri
       inputs.starship-jj.overlays.default
       inputs.nixvim-config.overlays.default

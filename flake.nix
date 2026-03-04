@@ -12,6 +12,8 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
     catppuccin.url = "github:catppuccin/nix";
+    claude-desktop.url = "github:aaddrick/claude-desktop-debian";
+    claude-desktop.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";

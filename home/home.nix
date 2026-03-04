@@ -10,6 +10,8 @@
       brightnessctl
       cachix
       claude-code
+      # claude-desktop
+      claude-desktop-fhs
       discord
       dust
       flatpak
