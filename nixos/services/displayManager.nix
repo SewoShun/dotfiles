@@ -3,7 +3,7 @@
     enable = true;
     lemurs.enable = false;
     sddm = {
-      enable = true;
+      enable = false;
       wayland.enable = true;
     };
   };
