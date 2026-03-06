@@ -17,10 +17,4 @@
       size = 32 * 1024;
     }
   ];
-
-  systemd = {
-    sleep.extraConfig = ''
-      HibernateDelay=30m
-    '';
-  };
 }
