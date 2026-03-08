@@ -3,6 +3,7 @@
     ./alacritty.nix
     ./direnv.nix
     ./eza.nix
+    ./firefox.nix
     ./fish.nix
     ./floorp.nix
     ./gh.nix
@@ -33,7 +34,6 @@
     emacs.enable = true;
     feh.enable = true;
     fd.enable = true;
-    firefox.enable = true;
     fzf.enable = true;
     lazydocker.enable = true;
     lazygit.enable = true;

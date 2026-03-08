@@ -22,6 +22,7 @@ let
 
   alacritty = lib.getExe config.programs.alacritty.package;
   ghostty = lib.getExe config.programs.ghostty.package;
+  firefox = lib.getExe config.programs.firefox.package;
 
   noctalia-call =
     cmd:
@@ -43,7 +44,7 @@ in
     settings = {
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn alacritty "--command=${lib.getExe config.programs.zellij.package}";
-        "Mod+b".action = spawn "floorp";
+        "Mod+b".action = spawn firefox;
         "Mod+d".action.spawn = noctalia-call "launcher toggle";
         "Mod+Shift+p".action.spawn = noctalia-call "sessionMenu toggle";
         "Mod+Comma".action.spawn = noctalia-call "settings toggle";

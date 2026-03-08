@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.floorp = {
-    enable = true;
+    enable = false;
     languagePacks = [ "ja" ];
     profiles.default = {
       extensions = {
