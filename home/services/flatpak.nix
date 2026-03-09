@@ -6,6 +6,9 @@
 
   services.flatpak = {
     enable = true;
-    packages = [ "com.brave.Browser" ];
+    packages = [
+      "com.brave.Browser"
+      "com.github.powertab.powertabeditor"
+    ];
   };
 }
