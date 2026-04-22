@@ -28,6 +28,8 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  environment.systemPackages = with pkgs; [ sbctl ];
+
   services.greetd = {
     enable = true;
     settings = {

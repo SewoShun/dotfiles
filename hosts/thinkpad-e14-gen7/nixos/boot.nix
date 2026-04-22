@@ -6,12 +6,8 @@
 {
 
   boot = {
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/var/lib/sbctl";
-    };
-    loader.systemd-boot = {
-      enable = lib.mkForce false;
+    loader.limine = {
+      secureBoot.enable = true;
     };
     kernelParams = [
       "resume_offset=16377208"

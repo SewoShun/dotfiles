@@ -4,9 +4,14 @@
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot = {
+        enable = false;
         configurationLimit = 16;
       };
-      timeout = 0;
+      limine = {
+        enable = true;
+        maxGenerations = 8;
+      };
+      # timeout = 0;
     };
     kernelParams = [
       "zswap.enabled=1"
