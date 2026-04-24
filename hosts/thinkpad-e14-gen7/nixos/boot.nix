@@ -8,6 +8,11 @@
   boot = {
     loader.limine = {
       secureBoot.enable = true;
+      extraEntries = ''
+        /Windows
+          protocol: efi
+          path: uuid(4e81a813-74af-453c-a204-8141bcaade72):/EFI/Microsoft/Boot/bootmgfw.efi
+      '';
     };
     kernelParams = [
       "resume_offset=16377208"
