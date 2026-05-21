@@ -37,6 +37,7 @@
     xremap.inputs.nixpkgs.follows = "nixpkgs";
 
     nixvim-config.url = "github:SewoShun/nixvim-config";
+    yaskkserv2-nix.url = "github:SewoShun/yaskkserv2-nix";
   };
 
   nixConfig = {
