@@ -121,22 +121,6 @@ in
             "-d"
           ];
         }
-        {
-          argv = [
-            "${inputs.yaskkserv2-nix.packages.x86_64-linux.default}/bin/yaskkserv2"
-            "${
-              inputs.yaskkserv2-nix.packages.x86_64-linux.jisyo.override {
-                dicts = with pkgs; [
-                  skkDictionaries.l
-                  skkDictionaries.propernoun
-                  skkDictionaries.jinmei
-                  skkDictionaries.fullname
-                  skkDictionaries.geo
-                ];
-              }
-            }/share/skk/yaskkserv.jisyo"
-          ];
-        }
       ];
 
       layout = {

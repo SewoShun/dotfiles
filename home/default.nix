@@ -14,4 +14,5 @@
 
     inputs.nix-index-database.homeModules.default
   ];
+
 }
