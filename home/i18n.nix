@@ -34,6 +34,7 @@
       };
     };
   };
+
   xdg.dataFile."fcitx5/skk/dictionary_list".text = ''
     type=server,host=localhost,port=1178,encoding=EUC-JP
   '';

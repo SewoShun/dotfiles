@@ -2,8 +2,8 @@ name: build and merge
 
 on:
   pull_request:
-    branches:
-      - main
+    # branches:
+    #   - main
 
 jobs:
   nix-diff:
